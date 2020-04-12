@@ -6,5 +6,11 @@ td, div {
 </style>
 
 <div style="font-weight:bold;font-size:24pt;margin-bottom:30px;text-align:center;border-bottom:1px solid #000">
-HELLO WORLD $name
+HELLO WORLD
 </div>
+
+
+<div style="font-weight:bold;font-size:24pt;margin-bottom:30px;text-align:center;">
+$!name
+</div>
+
