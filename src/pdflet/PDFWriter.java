@@ -29,23 +29,13 @@ public class PDFWriter {
 	
 	private VelocityEngine engine;
 	private VelocityContext context;	
-	
-	static ResourceBundle rb;
-	static String tempLocation = "/Users/Admin/temp";
-	
-	static {
-		try {
-			rb = ResourceBundle.getBundle("pdflet");
-			tempLocation = rb.getString("tempLocation");
-			if ( !tempLocation.endsWith("/") ) tempLocation = tempLocation + "/";
-		} catch ( MissingResourceException e ) {
-			System.out.println("MissingResourceException: " + e.getMessage());	
-		}
-	}
+	private String tempLocation;
 
-	public PDFWriter(VelocityEngine engine, VelocityContext context) {
+
+	public PDFWriter(VelocityEngine engine, VelocityContext context, String tempLocation) {
 		this.engine = engine;
 		this.context = context;
+		this.tempLocation = tempLocation;
 	}
 	
 	
