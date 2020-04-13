@@ -1,0 +1,25 @@
+<project name="pdflet" basedir="../">
+	<property file="${basedir}/ant/build.properties"/>
+    <property name="webroot.dir" value="${basedir}/WebContent"/>
+    <property name="webinf.dir" value="${webroot.dir}/WEB-INF"/>
+    <property name="build.dir" value="build"/>
+	<property name="project.distname" value="pdflet"/>	
+
+	<path id="compile.classpath">
+    	<fileset dir="${webinf.dir}/lib">
+    	    <include name="**/*.jar"/>
+        </fileset>	
+	</path>	
+	
+	<target name="jar-create">
+  		<jar destfile="${build.dir}/${project.distname}.jar">
+            <fileset dir="${webinf.dir}/classes">
+            	<exclude name="**/*.svn"/>
+            	<exclude name="**/*.properties"/>
+            	<exclude name="**/*.xml"/>
+            </fileset>		
+  		</jar>
+	</target>	
+
+
+</project>
