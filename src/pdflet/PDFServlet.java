@@ -37,6 +37,7 @@ public abstract class PDFServlet implements IServlet {
 		}
 		
 		try {
+			context.put("contextPath", servletConfig.getServletContext().getRealPath("/"));
 			templateName = getTemplateName();
 			processData(request);
 			PDFWriter pdfw = new PDFWriter(engine, context);
