@@ -1,2 +1,2 @@
 # Pdflet
-Java based PDF Generator servlet
+Java based PDF generator servlet

@@ -13,7 +13,7 @@ public class HelloWorldPDF  extends PDFServlet {
 	}
 
 	@Override
-	public void processData(HttpServletRequest request) {
+	public void processTemplate(HttpServletRequest request) {
 		
 		context.put("name", "John Doe");
 		

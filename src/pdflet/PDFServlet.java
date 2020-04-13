@@ -39,7 +39,7 @@ public abstract class PDFServlet implements IServlet {
 		try {
 			context.put("contextPath", servletConfig.getServletContext().getRealPath("/"));
 			templateName = getTemplateName();
-			processData(request);
+			processTemplate(request);
 			PDFWriter pdfw = new PDFWriter(engine, context);
 			pdfw.writeContent(templateName, response);
 		} catch (Exception e) {
@@ -53,12 +53,11 @@ public abstract class PDFServlet implements IServlet {
         	context = new VelocityContext();
         	context.put("request_uid", UniqueID.getUID());
         } catch ( Exception e ) {
-        	System.out.println(">> ERROR IN VELOCITYSERVLET INITVELOCITY");
 	        e.printStackTrace();
         }
     }
 	
 	public abstract String getTemplateName();
-	public abstract void processData(HttpServletRequest request);
+	public abstract void processTemplate(HttpServletRequest request);
 
 }
