@@ -5,13 +5,13 @@
 <web-app>
 
   	<servlet>
-		<servlet-name>servlet</servlet-name>
+		<servlet-name>pdflet</servlet-name>
 		<servlet-class>pdflet.ServletTemplate</servlet-class>
 	</servlet> 	  
 
   	<servlet-mapping>
-    	<servlet-name>servlet</servlet-name>
-    	<url-pattern>/servlet/*</url-pattern>
+    	<servlet-name>pdflet</servlet-name>
+    	<url-pattern>/pdflet/*</url-pattern>
   	</servlet-mapping>   
   	  
 </web-app>
