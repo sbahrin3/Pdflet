@@ -21,5 +21,9 @@
   		</jar>
 	</target>	
 
-
+    <target name="copy_to_GitHub">
+    	<copy todir="/Users/shamsulbahrin/Documents/GitHub/Pdflet" includeEmptyDirs="no">
+    	     <fileset dir="."></fileset>
+    	</copy>    	
+    </target>	
 </project>

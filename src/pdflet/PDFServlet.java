@@ -37,15 +37,9 @@ public abstract class PDFServlet implements IServlet {
 		}
 		
 		try {
-			
-			String uploadDir = AppProperties.uploadDir();
-			
-			System.out.println("PDFLET Directory: " + uploadDir);
-			//String contextPath = servletConfig.getServletContext().getRealPath("/");
-			//context.put("contextPath", contextPath);
 			templateName = getTemplateName();
 			processTemplate(request);
-			PDFWriter pdfw = new PDFWriter(engine, context, uploadDir);
+			PDFWriter pdfw = new PDFWriter(engine, context);
 			pdfw.writeContent(templateName, response);
 		} catch (Exception e) {
 			e.printStackTrace();
