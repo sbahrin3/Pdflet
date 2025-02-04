@@ -36,6 +36,15 @@ public abstract class PDFServlet implements IServlet {
 			session.setAttribute("VELOCITY_ENGINE", engine);
 		}
 		
+		String contextPath = request.getContextPath();
+		String requestURL = request.getRequestURL().toString();
+		String appURL = requestURL.substring(0, requestURL.indexOf(contextPath)) + contextPath;
+		System.out.println("url = " + appURL);
+		
+		context.put("contextPath", request.getContextPath());
+		context.put("requestURL", request.getRequestURL());
+		context.put("appURL", appURL);
+		
 		try {
 			templateName = getTemplateName();
 			processTemplate(request);

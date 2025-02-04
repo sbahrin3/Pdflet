@@ -15,7 +15,7 @@ Hello $!name
 </div>
 
 <div style="text-align:center">
-	<img src="${contextPath}/img/cat.png" />
+	<img src="${appURL}/img/cat.png" />
 </div>
 
 <div style="margin-top:50px">
